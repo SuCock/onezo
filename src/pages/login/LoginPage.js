@@ -50,6 +50,7 @@ const LoginPage = () => {
 
   const successFn = result => {
     console.log("성공", result);
+    setCookie("member", JSON.stringify(result));
     moveToPath("/");
   };
   const failFn = result => {
